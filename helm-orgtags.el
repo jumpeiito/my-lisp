@@ -6,7 +6,6 @@
 		    (cl-reduce #'concat-colon slist)
 		    ":"))))
 
-
 (defvar helm-orgtags-source
   (helm-build-sync-source "OrgNews Tags"
     :candidates org-newspaper-tags-list
@@ -17,8 +16,4 @@
   (interactive)
   (helm :sources '(helm-orgtags-source)
 	:buffer "*helm orgtags*"))
-
-(helm-migemize-command helm-orgtags)
-
-
 

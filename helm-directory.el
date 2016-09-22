@@ -51,7 +51,9 @@
      (("申請関係" . "申請")
       . "s:/原田フォルダ/申請関係")
      (("組合アルバム" . "写真")
-      . "s:/馬場フォルダ/組合アルバム"))))
+      . "s:/馬場フォルダ/組合アルバム")
+     (("除籍ハガキ" . "保険料")
+      . "s:/山口フォルダ/保険料/除籍関係"))))
 
 (defvar helm-kyokenro-file
   (helm-kyokenro-file-transform
@@ -93,6 +95,8 @@
       . "s:/原田フォルダ/2016年度/拡大月間/行動参加確認表/実行動参加.xlsx")
      (("拡大月間進行表.xlsx" . "拡大")
       . "s:/原田フォルダ/2016年度/拡大月間/行動参加確認表/'16拡大月間　進行表.xlsx"))))
+
+
 
 (defvar helm-source-kyokenro-directory
   (helm-build-sync-source "Open Directory"

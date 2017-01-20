@@ -137,33 +137,6 @@
     :action     (lambda (file) (w32-shell-execute "open" file nil 1))
     :migemo     t))
 
-(defvar helm-w3m-history-candidates
-  (let (alist)
-    (mapatoms
-     (lambda (sym)
-       (and sym
-	    (setq url (symbol-name sym))
-	    (not (string-match "#" url))
-	    (not (string-match w3m-history-ignored-regexp url))
-	    (let ((title (or (w3m-arrived-title url) url)))
-	      (push (cons title url) alist))))
-     w3m-arrived-db)
-    alist))
-
-(defvar helm-w3m-history-v
-  (helm-build-sync-source "W3M history"
-    :candidates helm-w3m-history-candidates
-    :migemo     t
-    :action     (helm-make-actions
-		 "Open" #'w3m-goto-url
-		 "Open with new tab" #'w3m-goto-url-new-session)
-    ))
-
-(defun helm-w3m-history ()
-  (interactive)
-  (helm :sources '(helm-w3m-history-v)
-	:buffer  "*helm w3m-history*"))
-
 (defun helm-open-directory ()
   (interactive)
   (helm :sources '(helm-source-kyokenro-directory

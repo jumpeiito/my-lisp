@@ -5,11 +5,11 @@
     (mapatoms
      (lambda (sym)
        (and sym
-	    (setq url (symbol-name sym))
-	    (not (string-match "#" url))
-	    (not (string-match w3m-history-ignored-regexp url))
-	    (let ((title (or (w3m-arrived-get url 'title) url)))
-	      (push (cons title url) alist))))
+            (setq url (symbol-name sym))
+            (not (string-match "#" url))
+            (not (string-match w3m-history-ignored-regexp url))
+            (let ((title (or (w3m-arrived-get url 'title) url)))
+              (push (cons title url) alist))))
      w3m-arrived-db)
     alist))
 

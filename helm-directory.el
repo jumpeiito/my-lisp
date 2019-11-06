@@ -1,3 +1,4 @@
+
 (defun set-face-string (plist)
   (let ((val (plist-get plist :value)))
     (pcase (list (plist-get plist :type)
@@ -9,7 +10,7 @@
       (`("青" "0") (propertize val 'face 'helm-seinen-face))
       (`("青" "1") (propertize val 'face 'helm-seinen-face2))
       (`("一" "1") (propertize val 'face 'helm-hancho-face))
-      (t (propertize val 'face 'default)))))
+      (_ (propertize val 'face 'default)))))
 
 (defface helm-seinen-face   '((t :foreground "#1e90ff" :bold t)) "自分専用のface")
 (defface helm-seinen-face2  '((t :foreground "#1e90ff" :bold t :underline t)) "自分専用のface")
@@ -35,10 +36,12 @@
       . "s:/原田フォルダ/2015年度")
      (("2016年度" . "基本")
       . "s:/原田フォルダ/2016年度")
+     (("2017年度" . "基本")
+      . "s:/原田フォルダ/2017年度")
      (("月別資料" . "月別")
-      . "s:/原田フォルダ/2016年度/月別資料")
+      . "s:/原田フォルダ/2017年度/月別資料")
      (("さくら通信" . "新聞")
-      . "s:/馬場フォルダ/醍醐さくら通信/2016年")
+      . "s:/馬場フォルダ/醍醐さくら通信/2017年")
      (("組合員名簿" . "名簿")
       . "s:/馬場フォルダ/組合員名簿")
      (("山口フォルダ" . "個人")
@@ -61,6 +64,8 @@
       . "\\\\Kkrfsv01\\支部公開フォルダ\\専門部資料\\作業主任・特別教育・職長教育")
      (("支部決算書" . "会計")
       . "s:/原田フォルダ/支部決算書")
+     (("督促関係" . "組合費")
+      . "s:/原田フォルダ/実務用品/督促関係")
      (("建設業許可" . "許可")
       . "s:/建設業許可")
      (("全労済" . "全労済")
@@ -85,13 +90,13 @@
      (("全労済給付.醍醐.xlsm" . "全労済")
       . "s:/原田フォルダ/全労済/全労済給付.醍醐.xlsm")
      (("日野班長連絡表.xlsx" . "分会")
-      . "s:/原田フォルダ/分会関係/日野分会/16年度/16日野班長連絡表.xlsx")
+      . "s:/原田フォルダ/分会関係/日野分会/17年度/17日野班長連絡表.xlsx")
      (("建退共受付簿.xlsm" . "建退共")
       . "s:/原田フォルダ/建退共/建退共受付簿.醍醐ver.xlsm")
      (("一般会計月別決算.xlsx" . "会計")
-      . "s:/原田フォルダ/支部決算書/2016年度支部決算書/一般会計月別決算：16年度.xlsx")
+      . "s:/原田フォルダ/支部決算書/2017年度支部決算書/一般会計月別決算：17年度.xlsx")
      (("特別会計月別決算.xlsx" . "会計")
-      . "s:/原田フォルダ/支部決算書/2016年度支部決算書/特別会計月別決算：16年度.xlsx")
+      . "s:/原田フォルダ/支部決算書/2017年度支部決算書/特別会計月別決算：17年度.xlsx")
      (("国保給付.xlsx" . "申請")
       . "s:/原田フォルダ/申請関係/国保給付.xlsx")
      (("総合共済.xlsx" . "申請")
@@ -104,20 +109,22 @@
       . "s:/伊東フォルダ/2016年度　出勤簿（原紙） (2).xlsx")
      (("拡大月間用訪問名簿.xlsb" . "拡大")
       . "s:/原田フォルダ/2016年度/拡大月間/拡大月間用訪問名簿.xlsb")
+     (("汎用組合費FAX.docx" . "組合費")
+      . "s:/原田フォルダ/実務用品/督促関係/汎用組合費FAX.docx")
      (("加入手続状況一覧.xlsm" . "申請")
-      . "s:/馬場フォルダ/新加入/2016年度加入手続状況一覧.xlsm")
+      . "s:/馬場フォルダ/新加入/2017年度加入手続状況一覧.xlsm")
      (("現勢報告書.xlsx" . "年間")
-      . "s:/原田フォルダ/2016年度/年間資料/2016年度　現勢報告書.xlsx")
+      . "s:/原田フォルダ/2017年度/年間資料/2017年度　現勢報告書.xlsx")
      (("組合費納入状況.xlsx" . "年間")
-      . "s:/原田フォルダ/2016年度/年間資料/2016年度分会別組合費納入状況.xlsx")
+      . "s:/原田フォルダ/2017年度/年間資料/2017年度分会別組合費納入状況.xlsx")
      (("対象者名簿.xlsm" . "拡大")
-      . "s:/原田フォルダ/2016年度/年間資料/2016年度拡大対象者名簿.xlsm")
+      . "s:/原田フォルダ/2017年度/年間資料/2017年度拡大対象者名簿.xlsm")
      (("拡大進行状況.xlsx" . "年間")
-      . "s:/原田フォルダ/2016年度/年間資料/2016年度月別拡大進行状況.xlsx")
+      . "s:/原田フォルダ/2017年度/年間資料/2017年度月別拡大進行状況.xlsx")
      (("実行動参加.xlsx" . "拡大")
-      . "s:/原田フォルダ/2016年度/拡大月間/行動参加確認表/実行動参加.xlsx")
+      . "s:/原田フォルダ/2017年度/拡大月間/行動参加確認表/実行動参加.xlsx")
      (("拡大月間進行表.xlsx" . "拡大")
-      . "s:/原田フォルダ/2016年度/拡大月間/行動参加確認表/'16拡大月間　進行表.xlsx"))))
+      . "s:/原田フォルダ/2017年度/拡大月間/行動参加確認表/'17拡大月間　進行表.xlsx"))))
 
 (defvar helm-source-kyokenro-directory
   (helm-build-sync-source "Open Directory"
@@ -154,32 +161,42 @@
   ;;   (sleep-for 1)
   ;;   (message "hoge")
   ;;   (eval-buffer))
-  (message (format "%s" (length (car (last (split-string string "\n")))))))
+  ;; (message (format "%s" (length (car (last (split-string string "\n"))))))
+  (let ((string-list (filter (lambda (x) (not (string= "" x)))
+                             (split-string string "\n"))))
+    (insert (car (last string-list))))
+  )
+
+(defun filter (pred xl)
+  (let ((xls nil))
+    (dolist (x xl)
+      (if (funcall pred x)
+          (setq xls (cons x xls))))
+    (reverse xls)))
 
 (defun insert2 (_ string)
   (insert string))
 
-
-(defun myfetch (host file)
-  (interactive "sHost: \nsFile: ")
+(require 'url-util)
+(defun myfetch (file)
+  (interactive "sFile: ")
   (unless (process-status "hoge")
-    ;; (setq myfetch-buffer (get-buffer-create myfetch-buffer-name))
-    (let ((proc (make-network-process :name "hoge"
-                     :buffer nil
-                     :family 'ipv4
-                     :host "localhost"
-                     :service 3000
-                     ;; :sentinel 'myfetch-sentinel
-                     :nowait nil
-		     :coding 'utf-8
-                     :filter 'read-sexp
-		     :filter-multibyte t
-		     :server nil)))
-      ;; (myfetch-logging
-      ;;  (format "Access to http://localhost:3000/csv/hoge" host file))
-      ;; (myfetch-logging "Make connection...")
+    (let ((proc (make-network-process
+                 :name "hoge"
+                 :buffer nil
+                 :family 'ipv4
+                 :host "localhost"
+                 :service 3000
+                 :nowait nil
+                 :coding 'utf-8
+                 :filter 'read-sexp
+                 :filter-multibyte t
+                 :server nil)))
       (process-send-string
-       proc (format "GET /csv/hoge HTTP/1.0\r\n\r\n" file)))))
+       proc (format "GET /query/%s HTTP/1.1\r\n\r\n" (url-hexify-string file))))
+    (process-send-string
+     (get-process "hoge")
+     (format "GET /query/%s HTTP/1.1\r\n\r\n" (url-hexify-string file)))))
 
 (defun myfetch-filter (proc string)
   (myfetch-logging string))
